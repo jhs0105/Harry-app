@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import Hogwarts from "../assets/images/stars-g7f04ce2bb_1920.jpg";
 import { ResultData } from "../assets/data/result";
+import KakaoSharedButton from "./KakaoSharedButton";
 
 export default function Result() {
   const navigate = useNavigate();
@@ -33,6 +34,7 @@ export default function Result() {
           >
             처음으로 돌아가기
           </Button>
+          <KakaoSharedButton data={result}></KakaoSharedButton>
         </Buttons>
       </div>
     </Container>
