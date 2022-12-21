@@ -45,8 +45,9 @@ const Container = styled.div`
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  position: relative;
   .contents {
-    width: 90vw;
+    width: 90%;
     box-sizing: border-box;
     padding: 0 20px;
     display: flex;
@@ -57,13 +58,20 @@ const Container = styled.div`
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
   }
+  > img {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
 
 const Title = styled.div`
   margin: 50px 0 20px;
   font-size: 20px;
-  color: #333;
+  color: #000;
   line-height: 1.5;
+  word-break: keep-all;
   h2 {
     font-size: 20px;
   }
@@ -73,6 +81,7 @@ const Title = styled.div`
   img {
     width: 250px;
     border: 5px solid #ccc;
+    border-radius: 100%;
   }
 `;
 
@@ -95,6 +104,6 @@ const Button = styled.button`
   padding: 10px 20px;
   color: #fff;
   border-radius: 10px;
-  font-family: "Hyemin";
-  font-size: 15px;
+  font-family: inherit;
+  font-size: 18px;
 `;

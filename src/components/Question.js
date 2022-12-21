@@ -86,25 +86,34 @@ const Container = styled.div`
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  position: relative;
   .contents {
-    width: 90vw;
+    width: 90%;
+    height: 60%;
     box-sizing: border-box;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #ccc;
-    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+  }
+  > img {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 
 const Title = styled.div`
-  margin: 50px 0 20px;
+  margin: 50px 0;
   font-size: 20px;
-  color: #000;
+  color: #fff;
   line-height: 1.5;
   h2 {
     font-size: 20px;
@@ -120,16 +129,19 @@ const Buttons = styled.div`
   box-sizing: border-box;
 `;
 const Button = styled.button`
+  text-align: left;
   word-break: keep-all;
   width: 100%;
   margin-bottom: 5px;
   outline: none;
   border: none;
-  background-color: #333;
+  background-color: rgba(255, 255, 255, 0.3);
   bottom: 50%;
   padding: 10px 20px;
-  color: #fff;
+  color: #000;
+  font-weight: 700;
   border-radius: 10px;
-  font-family: "Hyemin";
-  font-size: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.25;
 `;

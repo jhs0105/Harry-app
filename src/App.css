@@ -1,14 +1,23 @@
 @font-face {
+  font-family: "Berk";
+  src: url("./assets/fonts/BerkshireSwash-Regular.ttf");
+}
+@font-face {
+  font-family: "GangwonEdu";
+  src: url("./assets/fonts/GangwonEdu_OTFBoldA.woff");
+}
+@font-face {
   font-family: "Tmoney";
   src: url("./assets/fonts/TmoneyRoundWindExtraBold.woff");
 }
+
 @font-face {
   font-family: "Hyemin";
   src: url("./assets/fonts/IM_Hyemin-Bold.woff2");
 }
 .App {
   text-align: center;
-  font-family: "Tmoney";
+  font-family: "GangwonEdu";
 }
 
 .App-logo {
@@ -45,4 +54,3 @@
     transform: rotate(360deg);
   }
 }
-
