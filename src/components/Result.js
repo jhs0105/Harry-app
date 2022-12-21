@@ -82,6 +82,7 @@ const Title = styled.div`
     width: 250px;
     border: 5px solid #ccc;
     border-radius: 100%;
+    object-fit: cover;
   }
 `;
 

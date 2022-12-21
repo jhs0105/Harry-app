@@ -39,46 +39,74 @@ export default function Question() {
     }
   };
   return (
-    <Container>
-      <img src={Hogwarts} alt="" />
-      <div className="contents">
-        <Title>
-          <h2>{QuestionData[questionNo].title}</h2>
-        </Title>
-        <Buttons>
-          <Button
-            onClick={() => {
-              onClick(1.5, "H");
-            }}
-          >
-            {QuestionData[questionNo].answerA}{" "}
-          </Button>
-          <Button
-            onClick={() => {
-              onClick(1.3, "R");
-            }}
-          >
-            {QuestionData[questionNo].answerB}
-          </Button>
-          <Button
-            onClick={() => {
-              onClick(1, "S");
-            }}
-          >
-            {QuestionData[questionNo].answerC}
-          </Button>
-          <Button
-            onClick={() => {
-              onClick(1.2, "G");
-            }}
-          >
-            {QuestionData[questionNo].answerD}
-          </Button>
-        </Buttons>
-      </div>
-    </Container>
+    <>
+      <Progress>
+        <div className="inner">
+          <div className="bar" style={{ width: `${(questionNo / (total + 1)) * 100}%` }}></div>
+        </div>
+      </Progress>
+      <Container>
+        <img src={Hogwarts} alt="" />
+        <div className="contents">
+          <Title>
+            <h2>{QuestionData[questionNo].title}</h2>
+          </Title>
+          <Buttons>
+            <Button
+              onClick={() => {
+                onClick(1.5, "H");
+              }}
+            >
+              {QuestionData[questionNo].answerA}{" "}
+            </Button>
+            <Button
+              onClick={() => {
+                onClick(1.3, "R");
+              }}
+            >
+              {QuestionData[questionNo].answerB}
+            </Button>
+            <Button
+              onClick={() => {
+                onClick(1, "S");
+              }}
+            >
+              {QuestionData[questionNo].answerC}
+            </Button>
+            <Button
+              onClick={() => {
+                onClick(1.2, "G");
+              }}
+            >
+              {QuestionData[questionNo].answerD}
+            </Button>
+          </Buttons>
+        </div>
+      </Container>
+    </>
   );
 }
+const Progress = styled.div`
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .inner {
+    width: 90%;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    overflow: hidden;
+    .bar {
+      background-color: #000;
+      height: 100%;
+      transition: all 0.25s ease;
+    }
+  }
+`;
 const Container = styled.div`
   display: flex;
   align-items: center;

@@ -1,7 +1,7 @@
 import hufflepuff from "../images/hufflepuff.jpeg";
 import ravenclaw from "../images/ravenclaw02.jpg";
 import slytherin from "../images/slytherin.jpg";
-import gryffindor from "../images/gryffindor.jpg";
+import gryffindor from "../images/gryffin.jpg";
 
 export const ResultData = [
   {
