@@ -69,7 +69,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
-  margin: 50px 0 20px;
+  margin: 20px 0 0px;
   font-size: 20px;
   color: #000;
   line-height: 1.5;

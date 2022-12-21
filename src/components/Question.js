@@ -117,7 +117,7 @@ const Container = styled.div`
   position: relative;
   .contents {
     width: 90%;
-    height: 60%;
+    height: 80%;
     box-sizing: border-box;
     padding: 0 20px;
     display: flex;
