@@ -145,6 +145,7 @@ const Title = styled.div`
   line-height: 1.5;
   h2 {
     font-size: 20px;
+    word-break: keep-all;
   }
 `;
 
@@ -152,7 +153,7 @@ const Buttons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 0px;
   width: 100%;
   box-sizing: border-box;
 `;
